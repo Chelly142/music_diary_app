@@ -1,22 +1,19 @@
 package com.zoe1.music_diary.Activity;
 
-import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.zoe1.music_diary.R;
-import com.zoe1.music_diary.TabPagerAdapter;
+import com.zoe1.music_diary.Adapter.TabPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
@@ -65,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
     private View createTabView(String tabName,Integer count) {
         View tabView = LayoutInflater.from(mContext).inflate(R.layout.custom_tab, null);
@@ -72,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         TextView count_text = tabView.findViewById(R.id.count_text);
         menu_name_text.setText(tabName);
         count_text.setText(count+"");
+        if (tabName =="곡"){
+            Drawable d = getResources().getDrawable(R.drawable.blue_textview_round_custom);
+            count_text.setBackground(d);
+            menu_name_text.setTextColor(Color.parseColor("#001BFF"));
+            count_text.setTextColor(Color.parseColor("#001BFF"));
+        }
         return tabView;
     }
 }

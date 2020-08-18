@@ -1,4 +1,4 @@
-package com.zoe1.music_diary;
+package com.zoe1.music_diary.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
