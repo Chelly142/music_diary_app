@@ -18,6 +18,7 @@ import com.zoe1.music_diary.Adapter.TabPagerAdapter;
 public class MainActivity extends AppCompatActivity {
     private Context mContext;
     private TabLayout tabLayout;
+    ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setCustomView(createTabView("일기",diary_count)));
         tabLayout.addTab(tabLayout.newTab().setCustomView(createTabView("장르",category_count)));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        final ViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.view_pager);
         TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         viewPager.setAdapter(tabPagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
@@ -79,4 +80,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return tabView;
     }
+
 }

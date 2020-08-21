@@ -24,5 +24,7 @@ public class Music {
         this.title = title;
         this.artist = artist;
         this.image_url = image_url;
+        this.rank = "0";
+        this.category="0";
     }
 }

@@ -1,9 +1,14 @@
 package com.zoe1.music_diary.Adapter;
 
+import android.content.Context;
+import android.view.View;
+import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
 
 import com.zoe1.music_diary.Fragment.Activitiy.categoryFragment;
 import com.zoe1.music_diary.Fragment.Activitiy.diaryFragment;
@@ -15,6 +20,7 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
         super(fm, tabCount);
         this.tabCount = tabCount;
     }
+
 
     @NonNull
     @Override
@@ -29,10 +35,12 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
             case 2:
                 categoryFragment categoryFragment = new categoryFragment();
                 return categoryFragment;
+
             default:
                 return null;
         }
     }
+
 
     @Override
     public int getCount() {
