@@ -14,8 +14,7 @@
 - fragment에 대해 정확히 알아볼것
 - musicFragment 의 데이터베이스를 이용한 메인recyclerView 완성
 # 해결되지 않은 문제
-- 1 리사이클러뷰를 위한 어레이리스트를 엑티비티 클래스 단위에서 정의해줬는데 객체를 추가하는 단계에서 오류가나고 doinBackgorund에서 한번더 정의해주니 해결이 됨
-- 2 searchFragemnt를 하나더 생성해 musicFragment에서 버튼 이벤트로 이동해야하는데 문제는 viewpager에 layout을 넣는거라 표현이 안된다.
-- 3 room을 actrivity에서 생성해서 fragment에서 도 불러올수있는 방법?
- - 3-1 ViewModel을 사용해 해결할 수 있지만 viewModelProvider의 인자에 대한 이해가 너무 어려움(기본이 부족하다고 생각되어짐) 
+- 1 searchFragemnt를 하나더 생성해 musicFragment에서 버튼 이벤트로 이동해야하는데 문제는 viewpager에 layout을 넣는거라 표현이 안된다.
+- 2 room을 actrivity에서 생성해서 fragment에서 도 불러올수있는 방법?
+ - 2-1 ViewModel을 사용해 해결할 수 있지만 viewModelProvider의 인자에 대한 이해가 너무 어려움(기본이 부족하다고 생각되어짐) 
 
